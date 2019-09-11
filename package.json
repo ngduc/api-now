@@ -1,12 +1,13 @@
 {
-  "name": "json-man",
+  "name": "json-now",
   "version": "0.0.1",
   "preferGlobal": true,
   "bin": {
-    "json-man": "./bin/index.js"
+    "json-now": "./bin/index.js"
   },
   "dependencies": {
     "commander": "^3.0.1",
+    "faker": "^4.1.0",
     "json-server": "^0.15.1"
   }
 }
