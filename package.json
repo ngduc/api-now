@@ -1,7 +1,6 @@
 {
   "name": "json-now",
-  "version": "0.0.2",
-  "preferGlobal": true,
+  "version": "0.0.3",
   "bin": {
     "json-now": "./bin/index.js"
   },
