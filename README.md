@@ -21,7 +21,7 @@ Create [db.json](tests/sample.json) file, then run json-now to start a HTTPS ser
   ]
 }
 ```
-`$ json-now -k keyFile -c certFile -p 3003 -w [db.json](tests/sample.json)`
+`$ json-now -k keyFile -c certFile -p 3003 -w db.json`
 
 or create a .js file and use "faker" data - [generateData.js](tests/generateData.js)
 
@@ -40,12 +40,12 @@ Options:
 
 ### TIPS
 
-Command line to generate self-signed Key & Cert files:
+- Command line to generate self-signed Key & Cert files:
 
 `openssl req -new -newkey rsa:4096 -days 3650 -nodes -x509 -subj "/C=US/ST=California/L=San Francisco/O=Organization/CN=CommonName" -keyout key.pem -out cert.pem`
 
-json-server - [repo](https://github.com/typicode/json-server)
+- json-server - [repo](https://github.com/typicode/json-server)
 
-One more thing:
+- One more thing:
 
 ★ this repo, open PRs and dance :)
