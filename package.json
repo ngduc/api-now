@@ -1,0 +1,12 @@
+{
+  "name": "json-man",
+  "version": "0.0.1",
+  "preferGlobal": true,
+  "bin": {
+    "json-man": "./bin/index.js"
+  },
+  "dependencies": {
+    "commander": "^3.0.1",
+    "json-server": "^0.15.1"
+  }
+}
