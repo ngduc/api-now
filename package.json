@@ -1,9 +1,17 @@
 {
   "name": "json-now",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Launch an API Server to serve data from a JSON or JS file.",
   "author": "Duc Nguyen",
   "license": "MIT",
+  "homepage": "https://github.com/ngduc/json-now",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngduc/json-now.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ngduc/json-now/issues"
+  },
   "bin": {
     "json-now": "./bin/index.js"
   },
