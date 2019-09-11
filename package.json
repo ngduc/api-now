@@ -1,12 +1,17 @@
 {
   "name": "json-now",
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "description": "Launch an API Server to serve data from a JSON or JS file.",
+  "author": "Duc Nguyen",
+  "license": "MIT",
   "bin": {
     "json-now": "./bin/index.js"
   },
   "dependencies": {
     "commander": "^3.0.1",
-    "faker": "^4.1.0",
     "json-server": "^0.15.1"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0"
   }
 }
