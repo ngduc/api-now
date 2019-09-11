@@ -1,6 +1,6 @@
 {
   "name": "json-now",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Launch an API Server to serve data from a JSON or JS file.",
   "author": "Duc Nguyen",
   "license": "MIT",
