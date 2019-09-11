@@ -1,8 +1,10 @@
 # json-now
 
-Launch an API Server to serve data from a JSON or JS file.
+Launch an API Server to serve data from a JSON or JS file with HTTPS support.
 
-Based on json-server.
+Based on json-server. More features:
+- HTTPS support (with key, cert files).
+- Can take .json or .js file
 
 ### INSTALL
 
@@ -44,7 +46,7 @@ Options:
 
 `openssl req -new -newkey rsa:4096 -days 3650 -nodes -x509 -subj "/C=US/ST=California/L=San Francisco/O=Organization/CN=CommonName" -keyout key.pem -out cert.pem`
 
-- json-server - [repo](https://github.com/typicode/json-server)
+- json-server - [repo & documents](https://github.com/typicode/json-server)
 
 - One more thing:
 
