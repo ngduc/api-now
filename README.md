@@ -12,11 +12,31 @@ As a global command: `$ npm install json-now -g`
 
 ### USAGE
 
-`$ json-now [options] <jsonFile or jsFile>`
+Create [db.json](tests/sample.json) file, then run json-now to start a HTTPS server at port 3003:
+```
+{
+  "posts": [
+    { "id": 1, "title": "Post title 1" },
+    { "id": 2, "title": "Post title 2" }
+  ]
+}
+```
+`$ json-now -k keyFile -c certFile -p 3003 -w [db.json](tests/sample.json)`
 
-Example: start a HTTPS server at port 3003:
+or create a .js file and use "faker" data - [generateData.js](tests/generateData.js)
 
-`$ json-now -k keyFile -c certFile -p 3003 data.json`
+How to use:
+
+```
+Usage: json-now [options] <json or js file>
+Options:
+  -c, --cert <certFile>  HTTPS cert file
+  -k, --key <keyFile>    HTTPS key file
+  -p, --port <port>      use custom port
+  -v, --version          show version
+  -w, --watch            Watch for changes and reload (default: false)
+  -h, --help             output usage information
+```
 
 ### TIPS
 
@@ -24,4 +44,8 @@ Command line to generate self-signed Key & Cert files:
 
 `openssl req -new -newkey rsa:4096 -days 3650 -nodes -x509 -subj "/C=US/ST=California/L=San Francisco/O=Organization/CN=CommonName" -keyout key.pem -out cert.pem`
 
-One more thing: ★ this repo, open PRs and dance :)
+json-server - [repo](https://github.com/typicode/json-server)
+
+One more thing:
+
+★ this repo, open PRs and dance :)

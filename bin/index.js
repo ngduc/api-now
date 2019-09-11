@@ -10,10 +10,11 @@ function collect(value, previous) {
 program
   .usage('[options] <file>')
   .description('Launch an API Server to serve data from a JSON or JS file.')
-  .option('-v, --version', 'show version', ver, '')
-  .option('-p, --port <port>', 'use custom port', collect, '')
-  .option('-k, --key <keyFile>', 'HTTPS key file', collect, '')
   .option('-c, --cert <certFile>', 'HTTPS cert file', collect, '')
+  .option('-k, --key <keyFile>', 'HTTPS key file', collect, '')
+  .option('-p, --port <port>', 'use custom port', collect, '')
+  .option('-v, --version', 'show version', ver, '')
+  .option('-w, --watch', 'Watch for changes and reload (.json)', false)
   .action((file, options) => {
     if (!options) {
       program.help();
@@ -23,6 +24,7 @@ program
       port: options.port || 3003,
       key: options.key,
       cert: options.cert,
+      watch: options.watch,
       file
     };
     require('../lib/server')(opt);
