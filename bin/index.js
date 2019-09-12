@@ -22,20 +22,26 @@ program
   .action((file, options) => {
     if (!options) {
       if (process.argv.length === 2) {
+        // user ran $ json-now without options or file => serve default dataset:
         require('../lib/server')({
           port: DEFAULT_PORT,
           file: ''
         });
+        // program.help();
+        return;
       }
-      // program.help();
-      return;
+    }
+    let cmdOptions = options;
+    if (file && typeof file.key === 'string') {
+      // if user didn't provide [file] => "file" argument became "options" here:
+      cmdOptions = file;
     }
     const opt = {
-      port: options.port || DEFAULT_PORT,
-      key: options.key,
-      cert: options.cert,
-      watch: options.watch,
-      file
+      port: parseInt(cmdOptions.port, 10) || DEFAULT_PORT,
+      key: cmdOptions.key,
+      cert: cmdOptions.cert,
+      watch: cmdOptions.watch,
+      file: typeof file === 'string' ? file : ''
     };
     require('../lib/server')(opt);
   })

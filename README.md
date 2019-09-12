@@ -11,11 +11,9 @@ Based on json-server. More features:
 
 ### INSTALL
 
-As a dependency: `$ npm install json-now`
-
-As a global command: `$ npm install json-now -g`
-
-Or run it without installing: `$ npx json-now`
+- As a dependency: `$ npm install json-now`
+- As a global command: `$ npm install json-now -g`
+- Or run it without installing: `$ npx json-now`
 
 ### USAGE
 
@@ -40,7 +38,7 @@ $ json-now db.json
 $ json-now -k keyFile -c certFile -p 3003 -w db.json
 ```
 
-or create a .js file and use "faker" data like [generateData.js](tests/generateData.js)
+Or create a .js file and use "faker" data like [generateData.js](tests/generateData.js)
 
 How to use:
 
