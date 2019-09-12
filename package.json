@@ -1,7 +1,7 @@
 {
   "name": "json-now",
-  "version": "0.1.2",
-  "description": "Launch an API Server to serve data from a JSON or JS file with HTTPS support. Based on json-server.",
+  "version": "0.1.3",
+  "description": "Launch an API Server to serve data from a JSON, JS file or faker data with HTTPS support. Based on json-server.",
   "author": "Duc Nguyen",
   "license": "MIT",
   "homepage": "https://github.com/ngduc/json-now",

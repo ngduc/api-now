@@ -1,21 +1,23 @@
-# json-now
+# 🎫 json-now
 
 <img src="logo.png" />
 
-Launch an API Server to serve data from a JSON or JS file with HTTPS support.
+Launch an API Server to serve data from a JSON, JS file or faker data with HTTPS support.
 
 Based on json-server. More features:
 - Default datasets out-of-the-box: users, posts (using faker). Just run $ json-now
 - HTTPS support (with key, cert files).
 - Can take .json or .js file.
 
-### INSTALL
+<img src="https://github.com/ngduc/json-now/workflows/Node%20CI/badge.svg">
+
+### 🔧 INSTALL
 
 - As a dependency: `$ npm install json-now`
 - As a global command: `$ npm install json-now -g`
 - Or run it without installing: `$ npx json-now`
 
-### USAGE
+### 📖 USAGE
 
 `$ json-now`
 
@@ -53,7 +55,7 @@ Options:
   -h, --help             Output usage information
 ```
 
-### TIPS
+### 📖 TIPS
 
 - json-server - [Repo & Documents](https://github.com/typicode/json-server)
 
