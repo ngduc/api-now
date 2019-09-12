@@ -15,6 +15,8 @@ As a dependency: `$ npm install json-now`
 
 As a global command: `$ npm install json-now -g`
 
+Or run it without installing: `$ npx json-now`
+
 ### USAGE
 
 `$ json-now`
@@ -61,8 +63,7 @@ Options:
 
 `openssl req -new -newkey rsa:4096 -days 3650 -nodes -x509 -subj "/C=US/ST=California/L=San Francisco/O=Organization/CN=CommonName" -keyout key.pem -out cert.pem`
 
-- Article: [How to create a command-line npm module (CLI) using Commander.js
-](https://medium.com/@ngduc/how-to-create-a-command-line-npm-module-cli-using-commander-js-1073e616aee7)
+- Article: [How to create your command-line program (CLI) with NodeJS and Commander.js](https://medium.com/@ngduc/how-to-create-a-command-line-npm-module-cli-using-commander-js-1073e616aee7)
 
 - One more thing:
   - ★ this repo, open PRs and dance :)
