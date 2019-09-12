@@ -17,6 +17,12 @@ As a global command: `$ npm install json-now -g`
 
 ### USAGE
 
+`$ json-now`
+
+Then try it like `$ curl http://localhost:3003`
+
+#### Serve data from a JSON file:
+
 Create [db.json](tests/sample.json) file, then run json-now to start a HTTPS server at port 3003:
 ```
 {
