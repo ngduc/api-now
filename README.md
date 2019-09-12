@@ -1,4 +1,4 @@
-# 🎫 json-now
+# 🐕 json-now
 
 <img src="logo.png" />
 
