@@ -1,15 +1,16 @@
 # 🐕 json-now
 
-<img src="logo.png" />
+<img src="logo.png" height="100" />
 
-Launch an API Server to serve data from a JSON, JS file or faker data with HTTPS support.
+Launch an API Server to serve a JSON, JS file or faker data with HTTPS support.
 
-Based on json-server. More features:
+Based on json-server with more features:
 - Default datasets out-of-the-box: users, posts (using faker). Just run $ json-now
 - HTTPS support (with key, cert files).
 - Can take .json or .js file.
+- /echo route to respond parameters back as json.
 
-<img src="https://github.com/ngduc/json-now/workflows/Node%20CI/badge.svg">
+<img src="https://github.com/ngduc/json-now/workflows/Node%20CI/badge.svg" />
 
 ### 🔧 INSTALL
 
@@ -21,7 +22,12 @@ Based on json-server. More features:
 
 `$ json-now`
 
-Then try it like `$ curl http://localhost:3003/users`
+Then try it:
+
+```
+$ curl http://localhost:3003/users
+$ curl http://localhost:3003/echo?any=value
+```
 
 #### Serve data from a JSON file:
 
