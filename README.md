@@ -21,7 +21,7 @@ Based on json-server. More features:
 
 `$ json-now`
 
-Then try it like `$ curl http://localhost:3003`
+Then try it like `$ curl http://localhost:3003/users`
 
 #### Serve data from a JSON file:
 
