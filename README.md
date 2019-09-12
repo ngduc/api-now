@@ -12,24 +12,24 @@ Based on json-server with more features:
 
 <img src="https://github.com/ngduc/json-now/workflows/Node%20CI/badge.svg" />
 
-### 🔧 INSTALL
+## 🔧 Install
 
 - As a dependency: `$ npm install json-now`
 - As a global command: `$ npm install json-now -g`
 - Or run it without installing: `$ npx json-now`
 
-### 📖 USAGE
+## 📖 Usage
 
 `$ json-now`
 
-Then try it:
+That's it! You can try it now:
 
 ```
 $ curl http://localhost:3003/users
 $ curl http://localhost:3003/echo?any=value
 ```
 
-#### Serve data from a JSON file:
+## 📖 Serve data from a file
 
 Create [db.json](tests/sample.json) file, then run json-now to start a HTTPS server at port 3003:
 ```
@@ -61,7 +61,7 @@ Options:
   -h, --help             Output usage information
 ```
 
-### 📖 TIPS
+## 📖 Tips
 
 - json-server - [Repo & Documents](https://github.com/typicode/json-server)
 
