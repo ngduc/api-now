@@ -1,19 +1,19 @@
 {
-  "name": "json-now",
-  "version": "0.1.5",
+  "name": "api-now",
+  "version": "0.2.0",
   "description": "Launch an API Server to serve a JSON, JS file or faker data with HTTPS support. Based on json-server.",
   "author": "Duc Nguyen",
   "license": "MIT",
-  "homepage": "https://github.com/ngduc/json-now",
+  "homepage": "https://github.com/ngduc/api-now",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ngduc/json-now.git"
+    "url": "https://github.com/ngduc/api-now.git"
   },
   "bugs": {
-    "url": "https://github.com/ngduc/json-now/issues"
+    "url": "https://github.com/ngduc/api-now/issues"
   },
   "bin": {
-    "json-now": "./bin/index.js"
+    "api-now": "./bin/index.js"
   },
   "scripts": {
     "test": "jest"

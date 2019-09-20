@@ -1,26 +1,26 @@
-# 🐕 json-now
+# 🐕 api-now
 
 <img src="logo.png" height="100" />
 
 Launch an API Server to serve a JSON, JS file or faker data with HTTPS support.
 
 Based on json-server with more features:
-- Default datasets out-of-the-box: users, posts (using faker). Just run $ json-now
+- Default datasets out-of-the-box: users, posts (using faker). Just run $ api-now
 - HTTPS support (with key, cert files).
 - Can take .json or .js file.
 - /echo route to respond parameters back as json.
 
-<img src="https://github.com/ngduc/json-now/workflows/Node%20CI/badge.svg" />
+<img src="https://github.com/ngduc/api-now/workflows/Node%20CI/badge.svg" />
 
 ## 🔧 Install
 
-- As a dependency: `$ npm install json-now`
-- As a global command: `$ npm install json-now -g`
-- Or run it without installing: `$ npx json-now`
+- As a dependency: `$ npm install api-now`
+- As a global command: `$ npm install api-now -g`
+- Or run it without installing: `$ npx api-now`
 
 ## 📖 Usage
 
-`$ json-now`
+`$ api-now`
 
 That's it! You can try it now:
 
@@ -31,7 +31,7 @@ $ curl http://localhost:3003/echo?any=value
 
 ## 📖 Serve data from a file
 
-Create [db.json](tests/sample.json) file, then run json-now to start a HTTPS server at port 3003:
+Create [db.json](tests/sample.json) file, then run api-now to start a HTTPS server at port 3003:
 ```
 {
   "posts": [
@@ -42,8 +42,8 @@ Create [db.json](tests/sample.json) file, then run json-now to start a HTTPS ser
 ```
 
 ```
-$ json-now db.json
-$ json-now -k keyFile -c certFile -p 3003 -w db.json
+$ api-now db.json
+$ api-now -k keyFile -c certFile -p 3003 -w db.json
 ```
 
 Or create a .js file and use "faker" data like [generateData.js](tests/generateData.js)
@@ -51,7 +51,7 @@ Or create a .js file and use "faker" data like [generateData.js](tests/generateD
 How to use:
 
 ```
-Usage: json-now [options] [json or js file]
+Usage: api-now [options] [json or js file]
 Options:
   -c, --cert <certFile>  HTTPS cert file
   -k, --key <keyFile>    HTTPS key file

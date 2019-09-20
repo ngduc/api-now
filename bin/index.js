@@ -22,7 +22,7 @@ program
   .action((file, options) => {
     if (!options) {
       if (process.argv.length === 2) {
-        // user ran $ json-now without options or file => serve default dataset:
+        // user ran $ api-now without options or file => serve default dataset:
         require('../lib/server')({
           port: DEFAULT_PORT,
           file: ''
