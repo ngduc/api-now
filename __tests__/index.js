@@ -93,4 +93,22 @@ describe('cli', () => {
       request.get('/posts').expect(200, done);
     });
   });
+
+  describe('should authenticate user', () => {
+    beforeEach(done => {
+      child = cli([]);
+      serverReady(PORT, done);
+    });
+
+    test('authenticate with success', done => {
+      request
+        .post('/login')
+        .send({ username: 'test' })
+        .expect(200, done);
+    });
+
+    test('authenticate with failure', done => {
+      request.post('/login', { username: 'randomUser' }).expect(401, done);
+    });
+  });
 });
