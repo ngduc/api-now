@@ -1,6 +1,6 @@
 {
   "name": "api-now",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Launch an API Server to serve a JSON, JS file or faker data with HTTPS support. Based on json-server.",
   "author": "Duc Nguyen",
   "license": "MIT",
@@ -21,11 +21,11 @@
   "dependencies": {
     "commander": "^3.0.1",
     "faker": "^4.1.0",
-    "json-server": "^0.15.1"
+    "json-server": "^0.15.1",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
     "jest": "^24.9.0",
-    "jsonwebtoken": "^8.5.1",
     "mkdirp": "^0.5.1",
     "server-ready": "^0.3.1",
     "supertest": "^4.0.2",
