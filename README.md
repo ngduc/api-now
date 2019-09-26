@@ -9,6 +9,7 @@ Based on json-server with more features:
 - HTTPS support (with key, cert files).
 - Can take .json or .js file.
 - /echo route to respond parameters back as json.
+- /login route (POST) to respond with a dummy JWT token (using jsonwebtoken).
 
 <img src="https://github.com/ngduc/api-now/workflows/Node%20CI/badge.svg" />
 
@@ -26,7 +27,10 @@ That's it! You can try it now:
 
 ```
 $ curl http://localhost:3003/users
+
+Other Useful Routes:
 $ curl http://localhost:3003/echo?any=value
+$ curl -X POST http://localhost:3003/login -H 'Content-Type: application/json' -d '{"username": "test"}'
 ```
 
 ## 📖 Serve data from a file
