@@ -7,8 +7,9 @@ Launch an API Server to serve a JSON, JS file or faker data with HTTPS support.
 Based on json-server with more features:
 - Default datasets out-of-the-box: users, posts (using faker). Just run $ api-now
 - HTTPS support (with key, cert files).
-- Can take .json or .js file.
+- Can take a .json or .js file.
 - /echo route to respond parameters back as json.
+- /file route to serve any file type (including images).
 - /login route (POST) to respond with a dummy JWT token (using jsonwebtoken).
 
 <img src="https://github.com/ngduc/api-now/workflows/Node%20CI/badge.svg" />
@@ -30,6 +31,7 @@ $ curl http://localhost:3003/users
 
 Other Useful Routes:
 $ curl http://localhost:3003/echo?any=value
+$ curl http://localhost:3003/file?path=YourFilePath
 $ curl -X POST http://localhost:3003/login -H 'Content-Type: application/json' -d '{"username": "test"}'
 ```
 
