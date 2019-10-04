@@ -11,6 +11,8 @@ Based on json-server with more features:
 - /echo route to respond parameters back as json.
 - /file route to serve any file type (including images).
 - /login route (POST) to respond with a dummy JWT token (using jsonwebtoken).
+- /images/random to serve a random image file from a directory.
+- /avatars/random to serve a random avatar image.
 
 <img src="https://github.com/ngduc/api-now/workflows/Node%20CI/badge.svg" />
 
@@ -32,6 +34,8 @@ $ curl http://localhost:3003/users
 Other Useful Routes:
 $ curl http://localhost:3003/echo?any=value
 $ curl http://localhost:3003/file?path=YourFilePath
+$ curl http://localhost:3003/images/random?path=YourDirPath
+$ curl http://localhost:3003/avatars/random
 $ curl -X POST http://localhost:3003/login -H 'Content-Type: application/json' -d '{"username": "test"}'
 ```
 
