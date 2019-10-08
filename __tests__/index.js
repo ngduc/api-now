@@ -111,4 +111,19 @@ describe('cli', () => {
       request.post('/login', { username: 'randomUser' }).expect(401, done);
     });
   });
+
+  describe('should serve a static directory', () => {
+    beforeEach(done => {
+      child = cli(['--static', '../data']);
+      serverReady(PORT, done);
+    });
+
+    test('should serve index.html', done => {
+      request.get('/').expect(200, done);
+    });
+
+    test('should serve static.txt', done => {
+      request.get('/static.txt').expect(200, done);
+    });
+  });
 });
