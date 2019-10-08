@@ -17,6 +17,7 @@ program
   .option('-c, --cert <certFile>', 'HTTPS cert file', collect, '')
   .option('-k, --key <keyFile>', 'HTTPS key file', collect, '')
   .option('-p, --port <port>', 'Use custom port', collect, '')
+  .option('-s, --static <dir>', 'Serve static directory (examples: ./dist, ./public)', collect, '')
   .option('-v, --version', 'Show version', ver, '')
   .option('-w, --watch', 'Watch for changes and reload (.json)', false)
   .action((file, options) => {
@@ -41,6 +42,7 @@ program
       key: cmdOptions.key,
       cert: cmdOptions.cert,
       watch: cmdOptions.watch,
+      static: cmdOptions.static,
       file: typeof file === 'string' ? file : ''
     };
     require('../lib/server')(opt);
