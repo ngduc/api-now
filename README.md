@@ -5,10 +5,11 @@
 Launch an API Server to serve a JSON, JS file or faker data with HTTPS support.
 
 Based on **json-server** with more features:
-- Default datasets out-of-the-box: users, posts (using faker). Just run $ api-now
+- Default datasets out-of-the-box: todos, users, posts, comments (using faker). Just run `$ api-now`
 - HTTPS support (with key, cert files).
 - Can take a .json or .js file.
 - Can serve a static directory (e.g. /dist, /public etc.)
+- APIs support pagination (_page, _limit).
 - /echo route to respond parameters back as json.
 - /file route to serve any file type (including images).
 - /login route (POST) to respond with a dummy JWT token (using jsonwebtoken).
@@ -32,7 +33,8 @@ Based on **json-server** with more features:
 That's it! You can try it now:
 
 ```
-$ curl http://localhost:3003/users      (others: /posts /todos)
+$ curl http://localhost:3003/todos
+$ curl http://localhost:3003/users?_page=1&_limit=5    (others: /posts /comments)
 
 Other Useful Routes:
 $ curl http://localhost:3003/echo?any=value
