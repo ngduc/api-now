@@ -20,7 +20,7 @@ Based on **json-server** with more features:
 - /avatar/random to serve a random avatar image.
 - /nature/random to serve a random nature image.
 
-<img src="docs/api-now-demo.gif" />
+<img src="https://i.ibb.co/V2ZGrPh/api-now-demo.gif" />
 
 ## 🔧 Install
 
