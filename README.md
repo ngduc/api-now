@@ -1,13 +1,14 @@
 # 🐕 api-now
 
-<img src="logo.png" height="100" />
+<img src="docs/logo.png" height="100" />
 
-Launch an API Server to serve a JSON, JS file or faker data with HTTPS support.
+Launch an API Server to serve a JSON, JS file, GraphQL or faker data with HTTPS support.
 
 Based on **json-server** with more features:
 - Default datasets out-of-the-box: todos, users, posts, comments (using faker). Just run `$ api-now`
 - HTTPS support (with key, cert files).
 - Can take a .json or .js file.
+- GraphQL endpoint to serve faker data: /graphql
 - Can serve a static directory (e.g. /dist, /public etc.)
 - APIs support pagination (_page, _limit).
 - /echo route to respond parameters back as json.
@@ -43,6 +44,11 @@ $ curl http://localhost:3003/image/random?path=YourDirPath
 $ curl http://localhost:3003/avatar/random
 $ curl http://localhost:3003/nature/random
 $ curl -X POST http://localhost:3003/login -H 'Content-Type: application/json' -d '{"username": "test"}'
+
+Open GraphQL Query Page:
+open http://localhost:3003/graphql
+
+$ curl 'http://localhost:3003/graphql' -H 'Content-Type: application/json' --data-binary '{"query":"{ todos { title } }"}'
 ```
 
 ## 📖 Serve data from a file
@@ -86,7 +92,14 @@ Options:
 
 `openssl req -new -newkey rsa:4096 -days 3650 -nodes -x509 -subj "/C=US/ST=California/L=San Francisco/O=Organization/CN=CommonName" -keyout key.pem -out cert.pem`
 
+- Article: [Fake APIs for your UI ('til you make it!)](https://medium.com/javascript-in-plain-english/fake-apis-for-your-ui-til-you-make-it-b6a2da89fdaa)
+
 - Article: [How to create your command-line program (CLI) with NodeJS and Commander.js](https://medium.com/@ngduc/how-to-create-a-command-line-npm-module-cli-using-commander-js-1073e616aee7)
 
 - One more thing:
   - ★ this repo, open PRs and dance :)
+
+## Development
+
+All contributions are welcome!
+- [Development](docs/development.md)
