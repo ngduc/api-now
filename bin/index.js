@@ -13,7 +13,9 @@ function collect(value, previous) {
 
 program
   .usage('[options] [file]')
-  .description('Launch an API Server to serve a JSON, JS file or faker data with HTTPS support.')
+  .description(
+    'Launch an API Server to serve a JSON, JS file or faker data with HTTPS support.\nhttps://github.com/ngduc/api-now'
+  )
   .option('-c, --cert <certFile>', 'HTTPS cert file', collect, '')
   .option('-k, --key <keyFile>', 'HTTPS key file', collect, '')
   .option('-p, --port <port>', 'Use custom port', collect, '')
