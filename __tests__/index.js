@@ -125,5 +125,21 @@ describe('cli', () => {
     test('/graphql endpoint should be available', (done) => {
       request.get('/graphql').expect(400, done);
     });
+
+    test('/graphql endpoint - query users', (done) => {
+      request
+        .post('/graphql')
+        .set('Content-Type', 'application/json')
+        .send({ query: '{ users { id, firstName } }' })
+        .expect(200, done);
+    });
+
+    test('/graphql endpoint - query todos with pagination', (done) => {
+      request
+        .post('/graphql')
+        .set('Content-Type', 'application/json')
+        .send({ query: '{ todos(page:1, limit:5) { id, title } }' })
+        .expect(200, done);
+    });
   });
 });

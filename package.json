@@ -1,6 +1,6 @@
 {
   "name": "api-now",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Launch an API Server to serve a JSON, JS file, GraphQL or faker data with HTTPS support.",
   "author": "Duc Nguyen",
   "license": "MIT",

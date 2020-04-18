@@ -1,6 +1,7 @@
 # 🐕 api-now
 
 <img src="docs/logo.png" height="100" />
+<img src="https://github.com/ngduc/api-now/workflows/Node%20CI/badge.svg" />
 
 Launch an API Server to serve a JSON, JS file, GraphQL or faker data with HTTPS support.
 
@@ -19,7 +20,7 @@ Based on **json-server** with more features:
 - /avatar/random to serve a random avatar image.
 - /nature/random to serve a random nature image.
 
-<img src="https://github.com/ngduc/api-now/workflows/Node%20CI/badge.svg" />
+<img src="docs/api-now-demo.gif" />
 
 ## 🔧 Install
 
