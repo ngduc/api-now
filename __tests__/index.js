@@ -44,86 +44,86 @@ describe('cli', () => {
   });
 
   describe('db.json', () => {
-    beforeEach(done => {
+    beforeEach((done) => {
       child = cli(['../tests/db.json']);
       serverReady(PORT, done);
     });
 
-    test('should support JSON file', done => {
+    test('should support JSON file', (done) => {
       request.get('/posts').expect(200, done);
     });
 
-    test('should send CORS headers', done => {
+    test('should send CORS headers', (done) => {
       const origin = 'http://example.com';
-      request
-        .get('/posts')
-        .set('Origin', origin)
-        .expect('access-control-allow-origin', origin)
-        .expect(200, done);
+      request.get('/posts').set('Origin', origin).expect('access-control-allow-origin', origin).expect(200, done);
     });
   });
 
   describe('generateData.js', () => {
-    beforeEach(done => {
+    beforeEach((done) => {
       child = cli(['../tests/generateData.js']);
       serverReady(PORT, done);
     });
 
-    test('should support JS file', done => {
+    test('should support JS file', (done) => {
       request.get('/posts').expect(200, done);
     });
 
-    test('should send CORS headers', done => {
+    test('should send CORS headers', (done) => {
       const origin = 'http://example.com';
-      request
-        .get('/posts')
-        .set('Origin', origin)
-        .expect('access-control-allow-origin', origin)
-        .expect(200, done);
+      request.get('/posts').set('Origin', origin).expect('access-control-allow-origin', origin).expect(200, done);
     });
   });
 
   describe('with empty CLI arguments', () => {
-    beforeEach(done => {
+    beforeEach((done) => {
       child = cli([]);
       serverReady(PORT, done);
     });
 
-    test('should work', done => {
+    test('should work', (done) => {
       request.get('/posts').expect(200, done);
     });
   });
 
   describe('should authenticate user', () => {
-    beforeEach(done => {
+    beforeEach((done) => {
       child = cli([]);
       serverReady(PORT, done);
     });
 
-    test('authenticate with success', done => {
-      request
-        .post('/login')
-        .send({ username: 'test' })
-        .expect(200, done);
+    test('authenticate with success', (done) => {
+      request.post('/login').send({ username: 'test' }).expect(200, done);
     });
 
-    test('authenticate with failure', done => {
+    test('authenticate with failure', (done) => {
       request.post('/login', { username: 'randomUser' }).expect(401, done);
     });
   });
 
   describe('should serve a static directory', () => {
-    beforeEach(done => {
+    beforeEach((done) => {
       child = cli(['--static', '../data']);
       serverReady(PORT, done);
     });
 
-    test('should serve index.html', done => {
+    test('should serve index.html', (done) => {
       request.get('/').expect(200, done);
     });
 
-    test('should serve static.txt', done => {
+    test('should serve static.txt', (done) => {
       request.get('/static.txt').expect(200, done);
+    });
+  });
+
+  describe('GraphQL', () => {
+    beforeEach((done) => {
+      child = cli([]);
+      serverReady(PORT, done);
+    });
+
+    test('/graphql endpoint should be available', (done) => {
+      request.get('/graphql').expect(400, done);
     });
   });
 });
